@@ -1,0 +1,96 @@
+.quickView {
+  position: fixed;
+  z-index: 20;
+  background: #111;
+  border-radius: 10px;
+  margin: 0 2%;
+  height: 80vh;
+  top: 120px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+  overflow-y: scroll;
+  display: none;
+
+  &.open {
+    display: block;
+    background-color: #600000;
+  }
+
+  &__banner {
+    padding-top: 16vh;
+    height: 40vh;
+  }
+
+  &__content {
+    padding: 3rem;
+    font-size: 1rem;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+  }
+
+  &__description {
+    padding-top: 48px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    background-color: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    left: 25%;
+    right: 25%;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 1rem 0.4rem 0.5rem;
+    margin-right: 0.7rem;
+    color: inherit;
+    font-weight: 600;
+    background-color: rgba(110, 110, 110, 0.7);
+    border-radius: 5px;
+    cursor: pointer;
+
+    @media screen and(min-width:768px) {
+      font-size: 1.4rem;
+      padding: 0.8rem 1.5rem;
+    }
+
+    &--play {
+      color: #303030;
+      background-color: #fff;
+      margin-bottom: 24px;
+    }
+
+    svg {
+      margin-right: 0.4rem;
+
+      @media screen and(min-width:768px) {
+        font-size: 2.2rem;
+        margin-right: 0.8rem;
+      }
+    }
+  }
+}
+
+.modal {
+  display: none;
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 300;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  &.open {
+    display: block;
+  }
+}
